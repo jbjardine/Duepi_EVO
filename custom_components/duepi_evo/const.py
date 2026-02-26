@@ -60,3 +60,5 @@ ATTR_EXH_FAN_SPEED = "exh_fan_speed"
 ATTR_FLU_GAS_TEMP = "flu_gas_temp"
 ATTR_PELLET_SPEED = "pellet_speed"
 ATTR_POWER_LEVEL = "power_level"
+
+SERVICE_MANUAL_RESET = "manual_reset"

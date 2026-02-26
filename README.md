@@ -101,6 +101,15 @@ entities:
 ### Legacy climate attributes
 Legacy `climate.*` attributes are still exposed for compatibility and are planned to be removed after two releases.
 
+## Manual reset service
+You can trigger a manual reset from Home Assistant services:
+
+```yaml
+service: duepi_evo.manual_reset
+target:
+  entity_id: climate.pellet_stove
+```
+
 Confirmed working on:
 - Amesti 8100 plus2
 - AMG
