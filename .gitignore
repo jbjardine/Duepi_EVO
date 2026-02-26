@@ -1,2 +1,5 @@
 /evo-python/__pycache__/*
 /custom_components/duepi_evo/__pycache__/*
+
+/tests/__pycache__/*
+*.pyc
