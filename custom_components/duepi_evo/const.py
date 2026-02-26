@@ -72,6 +72,8 @@ ATTR_PRESSURE_SWITCH = "pressure_switch"
 PRESSURE_SWITCH_OK = 0x0100
 PRESSURE_SWITCH_PRESSURE = 0x0300
 
+SERVICE_MANUAL_RESET = "manual_reset"
+
 
 def entry_unique_id(host: str, port: int) -> str:
     """Build a stable config-entry unique ID from host/port."""
