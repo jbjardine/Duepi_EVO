@@ -5,7 +5,7 @@ from __future__ import annotations
 from datetime import timedelta
 
 from homeassistant.config_entries import ConfigEntry
-from homeassistant.const import ATTR_ENTITY_ID, CONF_HOST, CONF_NAME, CONF_PORT, CONF_SCAN_INTERVAL
+from homeassistant.const import CONF_HOST, CONF_NAME, CONF_PORT, CONF_SCAN_INTERVAL
 from homeassistant.core import HomeAssistant, ServiceCall
 from homeassistant.exceptions import HomeAssistantError
 from homeassistant.helpers import config_validation as cv
@@ -52,10 +52,6 @@ def _build_client_from_entry(entry: ConfigEntry) -> DuepiEvoClient:
 async def _async_handle_manual_reset(call: ServiceCall, hass: HomeAssistant) -> None:
     """Handle a manual reset service call."""
     entity_ids = await async_extract_entity_ids(hass, call, expand_group=True)
-    if not entity_ids:
-        entity_id = call.data.get(ATTR_ENTITY_ID)
-        if entity_id:
-            entity_ids = {entity_id} if isinstance(entity_id, str) else set(entity_id)
 
     if not entity_ids:
         raise HomeAssistantError("No target entity provided")
