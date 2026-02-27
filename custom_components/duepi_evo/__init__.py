@@ -51,7 +51,7 @@ def _build_client_from_entry(entry: ConfigEntry) -> DuepiEvoClient:
 
 async def _async_handle_manual_reset(call: ServiceCall, hass: HomeAssistant) -> None:
     """Handle a manual reset service call."""
-    entity_ids = await async_extract_entity_ids(hass, call, expand_group=True)
+    entity_ids = await async_extract_entity_ids(call, expand_group=True)
 
     if not entity_ids:
         raise HomeAssistantError("No target entity provided")
