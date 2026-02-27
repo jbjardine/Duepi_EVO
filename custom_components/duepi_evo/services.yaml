@@ -1,0 +1,7 @@
+manual_reset:
+  name: Manual reset
+  description: Send a remote reset command to the targeted Duepi EVO climate entity.
+  target:
+    entity:
+      domain: climate
+      integration: duepi_evo
