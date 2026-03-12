@@ -62,6 +62,7 @@ ATTR_PELLET_SPEED = "pellet_speed"
 ATTR_POWER_LEVEL = "power_level"
 SERVICE_MANUAL_RESET = "manual_reset"
 
+
 def entry_unique_id(host: str, port: int) -> str:
     """Build a stable config-entry unique ID from host/port."""
     return f"{host}:{port}"
